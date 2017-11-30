@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "time"
 
 func IsPrime(n int, prime []int) bool {
 	if n < 4 {
@@ -17,7 +18,8 @@ func IsPrime(n int, prime []int) bool {
 }
 
 func main() {
-	fmt.Println("start!!")
+	t := time.Now()
+	fmt.Printf("%s start!!\n", t)
 	n := 100
 	prime := []int{}
 
@@ -28,5 +30,6 @@ func main() {
 		}
 	}
 
-	fmt.Println("\nfinish!!")
+	t = time.Now()
+	fmt.Printf("\n%s finish!!\n", t)
 }
