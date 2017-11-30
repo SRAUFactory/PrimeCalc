@@ -33,5 +33,5 @@ func main() {
 	}
 
 	t = time.Now()
-	fmt.Printf("%s %d番目の素数: %d\n", t, n, prime[len(prime)-1])
+	fmt.Printf("%s %d番目の素数: %d\n", t, len(prime), prime[len(prime)-1])
 }
