@@ -1,5 +1,6 @@
 package main
 
+import "flag"
 import "fmt"
 import "time"
 
@@ -18,9 +19,11 @@ func IsPrime(n int, prime []int) bool {
 }
 
 func main() {
+	var n int
+	flag.IntVar(&n, "num", 10, "int flag")
+	flag.Parse()
 	t := time.Now()
 	fmt.Printf("%s start!!\n", t)
-	n := 1000000
 	prime := []int{}
 
 	for i := 2; i < n; i += 1 {
