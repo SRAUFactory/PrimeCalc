@@ -20,16 +20,15 @@ func IsPrime(n int, prime []int) bool {
 func main() {
 	t := time.Now()
 	fmt.Printf("%s start!!\n", t)
-	n := 100
+	n := 1000000
 	prime := []int{}
 
 	for i := 2; i < n; i += 1 {
 		if IsPrime(i, prime) {
 			prime = append(prime, i)
-			fmt.Printf("%d,", i)
 		}
 	}
 
 	t = time.Now()
-	fmt.Printf("\n%s finish!!\n", t)
+	fmt.Printf("%s %d番目の素数: %d\n", t, n, prime[len(prime)-1])
 }
